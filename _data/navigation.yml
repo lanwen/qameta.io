@@ -1,11 +1,10 @@
 - name: About Us
-- url: /
-
-- name: Blog
-- url: /#
-
-- name: Team
-- url: /#
-
+  url: /
 - name: Contact
-- url: /#
+  url: /#
+- name: Blog
+  url: /blog
+- name: Docs 
+  url: https://docs.qameta.io
+- name: Community
+  url: https://community.qameta.io
