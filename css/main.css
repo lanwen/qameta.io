@@ -1,3 +1,16 @@
+body {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Varela Round", sans-serif;
+
+    line-height: 20px;
+
+    color: #34302d;
+    background-color: #f1f1f1;
+}
+
 footer {
     color: #fff;
     height: auto;
@@ -14,12 +27,12 @@ footer a:hover {
     color: #fff;
 }
 
-footer .social a{
+footer .social a {
     font-size: 6em;
     padding: 0 120px 0 0;
 }
 
-footer .social a:hover{
+footer .social a:hover {
     text-decoration: none;
 }
 
@@ -34,7 +47,59 @@ h2.project-name {
     font-size: 5rem;
 }
 
-div.content {
-    margin-top: 100px;
-    margin-bottom: 100px;
+div.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+div.nav {
+    display: block;
+
+    width: 960px;
+    height: 70px;
+
+    line-height: 70px;
+    font-size: 14px;
+}
+
+div.nav__title {
+    display: inline-block;
+}
+
+div.nav__menu {
+    display: inline-block;
+}
+
+div.nav__menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+div.nav__menu ul li {
+    display: inline;
+}
+
+div.post__meta {
+    margin-bottom: 30px;
+}
+
+div.post__content {
+
+}
+
+div.post-meta__item {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 2px 30px 0 0;
+}
+
+img.avatar {
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.pull-right {
+    float: right;
+    margin-right: 0;
 }

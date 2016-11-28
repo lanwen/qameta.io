@@ -5,17 +5,30 @@ title: Blog
 author: eroshenkoam
 ---
 
-<h1>
-    {{ page.title }}
-</h1>
-<div class="post__meta">
-    {% avatar {{ page.author}} size=24 %} {{ page.author}}
-    <i class="fa fa-calendar" aria-hidden="true" style="font-size: 24px"></i>{{ page.date | date_to_string }}
-    <i class="fa fa-comments" aria-hidden="true" style="font-size: 24px"></i><a href="{{ page.url }}#disqus_thread"></a>
-</div>
-<div class="post__content">
-    {{ content }}
-</div>
-<div class="post__comments">
-    {% include disqus/comments.html %}
-</div>
+<section class="post">
+    <h1>
+        {{ page.title }}
+    </h1>
+    <div class="post__meta">
+        <div class="post-meta__item">
+            <a href="">
+                {% avatar {{ page.author}} size=24 %}
+                <span>{{ page.author}}</span>
+            </a>
+        </div>
+        <div class="post-meta__item">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <span>{{ page.date | date_to_long_string }}</span>
+        </div>
+        <div class="post-meta__item">
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            <span><a href="{{ page.url }}#disqus_thread"></a></span>
+        </div>
+    </div>
+    <div class="post__content">
+        {{ content }}
+    </div>
+    <div class="post__comments">
+        {% include disqus/comments.html %}
+    </div>
+</section>
