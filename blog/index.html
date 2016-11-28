@@ -3,10 +3,19 @@ layout: blog
 title: Blog
 ---
 
-Date: {{ page.date }}
 {% for post in site.posts %}
-<h2>
+<h2 class="post__header">
     <a href="{{ post.url }}">{{ post.title }}</a>
 </h2>
-<div>{{ post.excerpt }}</div>
+<div class="post__meta">
+    {% avatar {{ post.author}} size=24 %} {{ post.author}}
+    <i class="fa fa-calendar" aria-hidden="true" style="font-size: 24px"></i>{{ post.date | date_to_string }}
+    <i class="fa fa-comments" aria-hidden="true" style="font-size: 24px"></i><a href="{{ post.url }}#disqus_thread">comments</a>
+</div>
+<div class="post__excerpt">
+    {{ post.excerpt }}
+</div>
+<div class="post__read-more">
+    <a href="{{ post.url }}">READ MORE...</a>
+</div>
 {% endfor %}

@@ -11,6 +11,10 @@ author: eroshenkoam
             <div class="col-md-9">
                 {{ content }}
             </div>
+            <div class="col-md-3">
+                {% include blog/sidebar.html %}
+            </div>
         </div>
     </div>
 </section>
+{% include disqus.html %}

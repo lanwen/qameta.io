@@ -1,21 +1,21 @@
 ---
-layout: default
+layout: blog
 overview: true
 title: Blog
 author: eroshenkoam
 ---
 
-<section class="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <h1 class="page-header">
-                    {{ page.title }}
-                </h1>
-                <p>{{ post.date }} by {{ page.author }}</p>
-                {{ content }}
-                {% include disqus.html %}
-            </div>
-        </div>
-    </div>
-</section>
+<h1>
+    {{ page.title }}
+</h1>
+<div class="post__meta">
+    {% avatar {{ page.author}} size=24 %} {{ page.author}}
+    <i class="fa fa-calendar" aria-hidden="true" style="font-size: 24px"></i>{{ page.date | date_to_string }}
+    <i class="fa fa-comments" aria-hidden="true" style="font-size: 24px"></i><a href="{{ page.url }}#disqus_thread"></a>
+</div>
+<div class="post__content">
+    {{ content }}
+</div>
+<div class="post__comments">
+    {% include disqus.html %}
+</div>

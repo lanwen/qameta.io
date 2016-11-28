@@ -1,16 +1,10 @@
 version: '2'
 
-networks:
-  qameta:
-    driver: bridge
-
 services:
   site:
     image: jekyll/jekyll
-    command: 'jekyll serve'
+    command: '/src/jekyll/run.sh'
     ports:
       - '4000:4000'
     volumes:
       - '$PWD:/srv/jekyll'
-    networks:
-      - 'qameta'

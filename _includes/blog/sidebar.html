@@ -1,0 +1,7 @@
+<h3 class="page-header">
+    <a href="/blog/"> Recent posts</a>
+</h3>
+
+{% for post in site.posts %}
+<a href="{{ post.url }}">{{ post.title }}</a>
+{% endfor %}
