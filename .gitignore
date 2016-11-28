@@ -3,3 +3,6 @@
 
 # Jekyll files
 _site
+
+# Gem files
+Gemfile.lock
