@@ -33,3 +33,8 @@ section.about {
 h2.project-name {
     font-size: 5rem;
 }
+
+div.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

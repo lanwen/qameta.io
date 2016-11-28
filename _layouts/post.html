@@ -1,0 +1,21 @@
+---
+layout: default
+overview: true
+title: Blog
+author: eroshenkoam
+---
+
+<section class="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h1 class="page-header">
+                    {{ page.title }}
+                </h1>
+                <p>{{ post.date }} by {{ page.author }}</p>
+                {{ content }}
+                {% include disqus.html %}
+            </div>
+        </div>
+    </div>
+</section>

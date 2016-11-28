@@ -4,10 +4,7 @@ url: https://qameta.io
 
 markdown: kramdown
 highlighter: rouge
-permalink: /news/:year/:month/:day/:title/
-
-social:
-  github: https://github.com/qameta
+permalink: /blog/:year/:month/:day/:title/
 
 timezone: Europe/Moscow
 
