@@ -1,8 +1,8 @@
 - name: Blog
-  url: /blog
+  url: /blog/
 
 - name: Team
-  url: /team
+  url: /team/
 
 - name: Community
   url: https://community.qameta.io

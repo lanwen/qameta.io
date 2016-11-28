@@ -7,7 +7,9 @@
             <div class="nav__menu pull-right">
                 <ul>
                     {% for link in site.data.navigation %}
-                    <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+                    <li class="{% if page.url contains link.url %}active{% endif %}">
+                        <a href="{{ link.url }}">{{ link.name }}</a>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 overview: true
 comments: true
 

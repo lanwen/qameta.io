@@ -1,0 +1,24 @@
+---
+layout: blog
+overview: true
+title: Blog
+author: eroshenkoam
+---
+
+<section id="article">
+    <div class="article">
+        <h1 class="article__title">
+            {{ page.title }}
+        </h1>
+        <div class="article__meta">
+            <span>Published on {{ page.date | date_to_long_string }} by {{ page.author}}</span> •
+            <a href="{{ page.url }}#disqus_thread"></a>
+        </div>
+        <div class="article__body">
+            {{ content }}
+        </div>
+        <div class="article__comments">
+            {% include disqus/comments.html %}
+        </div>
+    </div>
+</section>
