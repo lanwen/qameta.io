@@ -5,6 +5,8 @@ comments: true
 
 author: lanwen
 title: Внешний вид в Jenkins - Jelly vs Groovy
+
+tags: [jenkins, plugin]
 ---
 
 По написанию сложного UI для Jenkins информации не очень много. Обычно это сводится к советам "смотри как сделано у других".
