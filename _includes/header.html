@@ -1,18 +1,16 @@
-<header>
+<header class="header">
     <div class="container">
-        <div class="nav">
-            <div class="nav__title">
-                <a href="{{ site.url }}">Qameta</a>
-            </div>
-            <div class="nav__menu pull-right">
-                <ul>
-                    {% for link in site.data.navigation %}
-                    <li class="{% if page.url contains link.url %}active{% endif %}">
-                        <a href="{{ link.url }}">{{ link.name }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+        <div class="header__brand">
+            <a class="header__link" href="{{ site.url }}">Qameta</a>
+        </div>
+        <div class="header__menu pull-right">
+            <ul class="list list-inline">
+                {% for link in site.data.navigation %}
+                <li class="{% if page.url contains link.url %}active{% endif %}">
+                    <a class="header__link" href="{{ link.url }}">{{ link.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </header>

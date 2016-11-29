@@ -1,0 +1,170 @@
+---
+---
+
+// commons
+
+$font-size: 16px;
+$font-color: #3A4145;
+$font-family: "Open Sans", sans-serif;
+
+$brand-blue: #0044bb;
+$brand-red: #ff0000;
+
+html, body, .content {
+  margin: 0;
+
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: lighter;
+  color: $font-color;
+
+  line-height: 24px;
+}
+
+a {
+  color: $font-color;
+  &:hover {
+    color: #000;
+  }
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.list-inline {
+  display: inline-block;
+  > li {
+    display: inline-block;
+  }
+}
+
+// article
+.article {
+
+  margin-bottom: 30px;
+
+  &__title {
+    display: block;
+    text-align: left;
+
+    > h2 {
+      font-size: 24px;
+      margin: 0 0 10px 0;
+      padding-top: 5px;
+      > a {
+        text-decoration: none;
+        color: #4A4A4A;
+      }
+    }
+    > img {
+      margin: 0 15px 10px 0;
+
+      border-radius: 1000px;
+      height: 60px;
+      width: 60px;
+      float: left;
+    }
+    > p {
+      margin: 0 0 20px 0;
+      line-height: 1;
+      font-size: .9em;
+      color: #aaa;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #DDD;
+      text-align: left;
+
+      > span {
+        margin-right: 20px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__excerpt {
+    color: #666;
+  }
+}
+
+// content
+.content {
+  margin: 50px 0;
+}
+
+// header
+$header-bg: #135571;
+$header-height: 70px;
+
+$header-font-color: #fff;
+
+.header {
+  margin: 0;
+  padding: 10px;
+
+  display: flex;
+  font-weight: lighter;
+  height: $header-height;
+  line-height: $header-height;
+
+  background-color: $header-bg;
+
+  &__link {
+    padding: 0 10px;
+    color: $header-font-color;
+    text-decoration: none;
+    &:hover {
+      color: $header-font-color;
+      text-decoration: none;
+    }
+  }
+
+  &__brand {
+    position: relative;
+    display: inline-block;
+
+    font-size: 34px;
+    font-weight: bold;
+    line-height: $header-height;
+  }
+
+  &__menu {
+    display: inline-block;
+  }
+
+}
+
+// footer
+$footer-bg: #222527;
+$footer-font-color: #999;
+
+.footer {
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+
+  color: $footer-font-color;
+  background-color: $footer-bg;
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

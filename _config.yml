@@ -13,6 +13,9 @@ gems:
   - jekyll-mentions
   - jekyll-avatar
 
+sass:
+  style: compressed
+
 exclude:
   - README.md
   - docker-compose.yml

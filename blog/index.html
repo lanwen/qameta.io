@@ -3,19 +3,28 @@ layout: blog
 title: Blog
 ---
 
-{% for post in site.posts %}
-<h2 class="post__header">
-    <a href="{{ post.url }}">{{ post.title }}</a>
-</h2>
-<div class="post__meta">
-    {% avatar {{ post.author}} size=24 %} {{ post.author}}
-    <i class="fa fa-calendar" aria-hidden="true" style="font-size: 24px"></i>{{ post.date | date_to_string }}
-    <i class="fa fa-comments" aria-hidden="true" style="font-size: 24px"></i><a href="{{ post.url }}#disqus_thread">comments</a>
-</div>
-<div class="post__excerpt">
-    {{ post.excerpt }}
-</div>
-<div class="post__read-more">
-    <a href="{{ post.url }}">READ MORE...</a>
-</div>
-{% endfor %}
+<ul class="list">
+    {% for post in site.posts %}
+    <li>
+        <div class="article">
+            <div class="article__title">
+                {% avatar {{post.author}} %}
+                <h2>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+                <p>
+                    <span><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</span>
+                    <span><i class="fa fa-tags" aria-hidden="true"></i> {{ post.tags | join: ", " }}</span>
+                    <span class="pull-right"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_long_string }}</span>
+                </p>
+            </div>
+            <div class="article__excerpt">
+                {{ post.excerpt }}
+            </div>
+            <div>
+                <a href="{{ post.url }}">READ MORE...</a>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
