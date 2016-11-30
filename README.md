@@ -4,6 +4,6 @@
 
 ### Run locally
 
-`gem install bundler`
-`bundle update`
-`bundle exec jekyll serve`
+* `gem install bundler`
+* `bundle update`
+* `bundle exec jekyll serve`
