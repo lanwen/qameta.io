@@ -1,6 +1,7 @@
 .article {
 
   margin-bottom: 30px;
+  padding: 0 10px;
 
   &__title {
     display: block;
@@ -27,7 +28,7 @@
       margin: 0 0 20px 0;
       line-height: 1;
       font-size: .9em;
-      color: #aaa;
+      color: #777;
       padding-bottom: 15px;
       border-bottom: 1px solid #DDD;
       text-align: left;
@@ -42,6 +43,5 @@
   }
 
   &__excerpt {
-    color: #666;
   }
 }
