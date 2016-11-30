@@ -18,6 +18,5 @@ sass:
 
 exclude:
   - README.md
-  - docker-compose.yml
   - .gitignore
   - .idea
