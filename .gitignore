@@ -2,6 +2,7 @@
 .idea
 
 # Jekyll files
+.sass-cache
 _site
 
 # Gem files

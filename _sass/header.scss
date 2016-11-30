@@ -1,0 +1,35 @@
+.header {
+  margin: 0;
+  padding: 10px;
+
+  display: flex;
+  font-weight: lighter;
+  height: $header-height;
+  line-height: $header-height;
+
+  background-color: $header-bg;
+
+  &__link {
+    padding: 0 10px;
+    color: $header-font-color;
+    text-decoration: none;
+    &:hover {
+      color: $header-font-color;
+      text-decoration: none;
+    }
+  }
+
+  &__brand {
+    position: relative;
+    display: inline-block;
+
+    font-size: 34px;
+    font-weight: bold;
+    line-height: $header-height;
+  }
+
+  &__menu {
+    display: inline-block;
+  }
+
+}
