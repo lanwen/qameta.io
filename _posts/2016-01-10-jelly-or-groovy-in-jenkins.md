@@ -3,7 +3,7 @@ layout: article
 overview: true
 comments: true
 
-author: eroshenkoam
+author: lanwen
 title: Внешний вид в Jenkins - Jelly vs Groovy
 
 tags: [jenkins, plugin]
