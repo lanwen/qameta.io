@@ -1,0 +1,10 @@
+---
+baseURL: "http://qameta.io/"
+title: "Qameta's team Blog"
+permalinks:
+  post: /:year/:month/:title/
+canonifyurls: true
+params:
+  Subtitle: "Software Development and Quality"
+  AuthorName: "Qameta team"
+  GitHubUser: "qameta"

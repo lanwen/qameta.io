@@ -5,6 +5,7 @@ comments: true
 
 author: lanwen
 title: Dependency Injection в Jenkins
+date: "2013-02-13T01:46:07+03:00"
 
 tags: [jenkins, plugin]
 ---
@@ -50,9 +51,9 @@ tags: [jenkins, plugin]
 
 Если статических вызовов очень много, можно попытаться сэкономить себе пару строк магическим вызовом:  
 
-{% highlight java %}
+```java
 Jenkins.getInstance().getInjector().injectMembers(this);
-{% endhighlight %}
+```
 
 Это вставит во все поля и геттеры, помеченные как `@Inject` все что зарегистрировано как расширение во внутреннем инжекторе. 
 
@@ -60,12 +61,12 @@ Jenkins.getInstance().getInjector().injectMembers(this);
 
 В тестах! Делаем рулу или метод подготовки:
 
-{% highlight java %}
+```java
 @Before
 public void setUp() throws Exception {
   jRule.getInstance().getInjector().injectMembers(this);
 }
-{% endhighlight %}
+```
 
 и получаем в полях все нужные объекты без дополнительных усилий. 
 Важно только чтобы `JenkinsRule` к этому моменту успешно стартовала.

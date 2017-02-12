@@ -4,6 +4,7 @@
 # Jekyll files
 .sass-cache
 _site
+public
 
 # Gem files
 Gemfile.lock

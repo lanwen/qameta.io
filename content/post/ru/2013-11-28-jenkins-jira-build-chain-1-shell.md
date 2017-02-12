@@ -5,6 +5,7 @@ comments: true
 
 author: lanwen
 title: "Jenkins: build, install: Рубим скорлупу"
+date: "2013-02-09T01:46:07+03:00"
 
 tags: [jenkins, plugin]
 ---
@@ -68,10 +69,10 @@ tags: [jenkins, plugin]
 
 > **FIXME:** Решение костыльное, и будет скоро переделано. Может быть кто то знает как это сделать лучше?
 
-{% highlight bash %}
+```bash
 WAIT_TIME=120
 sudo yum list $METAPACKAGE_NAME 2>&1 | grep Error && (echo 'sleep'; sleep $WAIT_TIME; sudo yum clean metadata;) ||  echo 'Pack ok'
-{% endhighlight %}
+```
 
 Здесь мы ищем в репозитории переданный пак, и если не находим - ждем 120 секунд (время
 обновления кроном репозитория). После чего чистим кеш юма и пробуем еще раз.

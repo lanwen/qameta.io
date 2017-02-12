@@ -2,6 +2,7 @@
 layout: article
 overview: true
 comments: true
+date: "2013-02-14T01:46:07+03:00"
 
 author: lanwen
 title: Внешний вид в Jenkins - Jelly vs Groovy
@@ -42,39 +43,39 @@ tags: [jenkins, plugin]
 
 У каждого groovy темплейта есть пакет, который соответствует полному классовому имени:
 
-{% highlight java %}
+```java
 package org.jenkinsci.plugins.github.config.GitHubTokenCredentialsCreator
-{% endhighlight %}
+```
 
 И секция с необходимыми неймспейсами:
 
-{% highlight java %}
+```java
 def f = namespace(lib.FormTagLib);
 def c = namespace(lib.CredentialsTagLib)
-{% endhighlight %}
+```
 
 Они аналогичны тем что содержатся в теге jelly, за исключением того что ссылаются на предподготовленный dsl:
 
-{% highlight xml %}
+```xml
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
-{% endhighlight %}
+```
 
 Дальше, алгоритм довольно прост - берем тег, удаляем `<>`, добавляем после `{}`.
 
 Т.е. например был код:
-{% highlight xml %}
+```xml
 <f:entry title="${ %Credentials}" field="credentialsId">
         <f:select />
 </f:entry>
-{% endhighlight %}
+```
 
 Станет:
 
-{% highlight groovy %}
+```groovy
 f.entry(title: _('Credentials'), field: 'credentialsId') {
     c.select()
 }
-{% endhighlight %}
+```
 
 #### Особенности
 

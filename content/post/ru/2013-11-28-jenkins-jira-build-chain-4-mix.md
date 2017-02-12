@@ -5,6 +5,7 @@ comments: true
 
 author: lanwen
 title: "Jenkins: build, install, test, notify: Смешиваем"
+date: "2013-02-12T01:46:07+03:00"
 
 tags: [jenkins, plugin]
 ---

@@ -5,6 +5,7 @@ comments: true
 
 author: lanwen
 title: "Jenkins: test: Чистим змей"
+date: "2013-02-10T01:46:07+03:00"
 
 tags: [jenkins, plugin]
 ---
@@ -24,7 +25,7 @@ tags: [jenkins, plugin]
 Весь код я приводить не буду, укажу только подводные камни, на которые мы напоролись.
 Начало скрипта выглядит так:
 
-{% highlight python %}
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -32,27 +33,27 @@ import sys
 import httplib
 import json
 import time
-{% endhighlight %}
+```
 
 Нам потребовалось обновить питон на конечной машинке, потому что тот, что стоял изначально не
 обладал необходимым набором библиотек. Еще одна непрятная особенность - вывод русских
 символов и сразу. Для этого пришлось обзавестись функцией:
 
-{% highlight python %}
+```python
 def printWithFlush(str):
     if isinstance(str, unicode):
         str = str.encode('utf-8')
     print str
     sys.stdout.flush()
     
-{% endhighlight %}
+```
 
 Без такого способа печати, скрипт сначала накапливал буфер, а потом выплевывал все разом в
 консоль (а нам то интересно тотчас узнавать что случилось). При этом на русских символах жалобно скулил и ничего дальше не делал.
 
 Общением с рестовыми ручками занимаются такие методы:
 
-{% highlight python %}
+```python
   def connect(self):
         return httplib.HTTPConnection(self.host)
 
@@ -72,7 +73,7 @@ def printWithFlush(str):
                 data = response.read()
                 #print data
                 return data
-{% endhighlight %}
+```
 
 Возможно, вечный цикл с выходом в возврат или эксепшен не лучшее решение, но это вполне рабочий пример.
 

@@ -5,6 +5,7 @@ comments: true
 
 author: lanwen
 title: "Jenkins: notify: Варим кофе"
+date: "2013-02-11T01:46:07+03:00"
 
 tags: [jenkins, plugin]
 ---
@@ -19,11 +20,11 @@ tags: [jenkins, plugin]
 Артем уже [писал об этом][9]. В джобе добавилось лишь преобразование привычного
 разработчикам перечисления тикетов через пробел в формат JQL при помощи *awk* и *sed*:
 
-{% highlight bash %}
+```bash
 #Преобразует 'TICKET-1 TICKET-2' в 'id in (TICKET-1, TICKET-2)'
 TASK=$(echo ${jiraTask} | sed -e 's/ /, /g' | awk '{ print "TASK_JQL=id in (" $0 ")" }')
 echo $TASK >> jira.properties
-{% endhighlight %}
+```
 
 И дальнейшего импорта этой переменной в переменные окружения при помощи [EnvInject Plugin][10] (по его настройке есть
 даже картинки на его страничке).
@@ -54,7 +55,7 @@ echo $TASK >> jira.properties
 в программе уже вычитывать оттуда. Тут будет полезной [библиотека][props] и ее возможности задать файл для чтения динамически.
 
 > Кстати настройки exec-плагина для подобного запуска:
-{% highlight xml %}
+```xml
     <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
@@ -70,7 +71,7 @@ echo $TASK >> jira.properties
             <mainClass>ru.yandex.jenkins.MainExec</mainClass>
         </configuration>
     </plugin>
-{% endhighlight %}
+```
 
 
 > #### Статьи из этой серии:

@@ -5,6 +5,7 @@ comments: true
 
 author: lanwen
 title: "Jenkins: build, install, test, notify: Чеклист"
+date: "2013-02-08T01:46:07+03:00"
 
 tags: [jenkins, plugin]
 ---
@@ -77,14 +78,14 @@ tags: [jenkins, plugin]
 всем окружающих. При этом все будут идти последовательно, кроме четвертой, которая будет
 инициироваться каждой.
 
-{% highlight bash %}
+```bash
 build-pack
 |     └── notify-by-tracker 
 install-pack
 |     └── notify-by-tracker
 run-tests
       └── notify-by-tracker
-{% endhighlight %}
+```
 
 ### Нужно не забыть
 
@@ -98,7 +99,7 @@ run-tests
 изолированное окружение, с четкими доступами к каждой машине, а сам пользователь jenkins не имеет пароля, только ключ.
 Дженкинсу разрешили делать судо без пароля, отредактировав файл `/etc/sudoers`:
 >
-{% highlight bash %}
+```bash
    #-----  jenkins  -----#
    jenkins ALL, ALL = NOPASSWD: /usr/bin/yum clean metadata
    jenkins ALL, ALL = NOPASSWD: /usr/bin/yum install *
@@ -106,7 +107,7 @@ run-tests
    jenkins ALL, ALL = NOPASSWD: /usr/bin/yum remove *
    jenkins ALL, ALL = NOPASSWD: /usr/bin/yum list *
    #-----  jenkins  -----#
-{% endhighlight %}
+```
 
 
   [1]: http://jenkins-ci.org/
