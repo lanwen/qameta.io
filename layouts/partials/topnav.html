@@ -1,0 +1,26 @@
+<nav class="main-nav overlay clearfix">
+    {{ if .Site.Params.logo }}
+    <a class="blog-logo" href="{{ .Permalink }}"><img src="{{.Site.BaseURL}}{{ .Site.Params.logo }}" alt="Blog Logo" /></a>
+    {{end}}
+
+    <ul class="global-menu">
+        {{ $currentNode := . }}
+
+        {{ range .Site.Menus.top }}
+        {{.Pre}}
+        <li role="presentation">
+            <a href="{{.URL}}">{{.Name}}</a>
+        </li>
+        {{end}}
+    </ul>
+
+    {{ if .Site.Menus.main }}
+    <a class="menu-button menu-button__transparent" href="#"><span>&#9776;</span></a>
+    {{else}}
+    {{ if .Site.Params.RSSLink}}
+    <a class="menu-button icon-feed" href="{{.Site.Params.RSSLink }}">&nbsp;&nbsp;Subscribe</a>
+    {{else}}
+    <a class="menu-button icon-feed" href="{{ .RSSLink }}">&nbsp;&nbsp;Subscribe</a>
+    {{end}}
+    {{end}}
+</nav>

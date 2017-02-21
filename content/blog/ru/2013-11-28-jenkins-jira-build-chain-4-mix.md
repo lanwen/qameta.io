@@ -1,11 +1,10 @@
 ---
-layout: article
 overview: true
 comments: true
-
 author: lanwen
 title: "Jenkins: build, install, test, notify: Смешиваем"
 date: "2013-02-12T01:46:07+03:00"
+description: "Немного о конечном процессе сборки"
 
 tags: [jenkins, plugin]
 ---

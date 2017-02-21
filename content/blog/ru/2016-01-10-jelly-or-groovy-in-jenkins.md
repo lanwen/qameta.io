@@ -71,7 +71,7 @@ def c = namespace(lib.CredentialsTagLib)
 
 Станет:
 
-```groovy
+```java
 f.entry(title: _('Credentials'), field: 'credentialsId') {
     c.select()
 }
