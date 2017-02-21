@@ -1,10 +1,25 @@
 ---
 baseURL: "http://qameta.io/"
-title: "Qameta's team Blog"
+title: "Qameta"
 permalinks:
   post: /:year/:month/:title/
 canonifyurls: true
 params:
-  Subtitle: "Software Development and Quality"
-  AuthorName: "Qameta team"
-  GitHubUser: "qameta"
+  description: "Software Development and Quality"
+  author: "Qameta team"
+  githubName: "qameta"
+  cover: "images/bg.jpg"
+  hideHUGOSupport: true
+menu:
+  main:
+      - Name: "Home"
+        Weight: -120
+        Identifier: "home"
+        URL: "/"
+      - Name: "Blog"
+        Weight: -110
+        Identifier: "blog"
+        URL: "/blog/"
+      - Name: "About"
+        Weight: -100
+        URL: "/about/"
