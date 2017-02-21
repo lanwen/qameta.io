@@ -3,9 +3,9 @@
 {{$authorname := or $author.name .Site.Params.author }}
 {{$authorbio := or $author.bio .Site.Params.bio }}
 {{$authorlocation := or $author.location .Site.Params.authorlocation }}
-{{$authorwebsite := or $author.website .Site.BaseURL}}
+{{$authorgithub := $author.github}}
 <section class="author">
-  <h4><a href="{{ $authorwebsite }}">{{$authorname}}</a></h4>
+  <h4><a href="https://github.com/{{ $authorwebsite }}">{{$authorname}}</a></h4>
   {{if $authorbio}}
   <p>{{$authorbio}}</p>
   {{else}}

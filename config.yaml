@@ -4,7 +4,7 @@ title: "Qameta"
 permalinks:
   blog: /:section/:year/:month/:filename/
 canonifyurls: true
-paginate: 2
+paginate: 4
 LanguageCode: "en_EN"
 theme: "casper"
 Copyright: © 2017
