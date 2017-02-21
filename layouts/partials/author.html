@@ -5,7 +5,7 @@
 {{$authorlocation := or $author.location .Site.Params.authorlocation }}
 {{$authorgithub := $author.github}}
 <section class="author">
-  <h4><a href="https://github.com/{{ $authorwebsite }}">{{$authorname}}</a></h4>
+  <h4><a href="https://github.com/{{ $authorgithub }}">{{$authorname}}</a></h4>
   {{if $authorbio}}
   <p>{{$authorbio}}</p>
   {{else}}
